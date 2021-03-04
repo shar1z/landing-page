@@ -37,7 +37,8 @@ h6 {
 }
 
 hr.star-light,
-hr.star-primary {
+hr.star-primary,
+hr.star-alternate {
     margin: 25px auto 30px;
     padding: 0;
     max-width: 250px;
@@ -48,7 +49,9 @@ hr.star-primary {
 }
 
 hr.star-light:after,
-hr.star-primary:after {
+hr.star-primary:after,
+hr.star-alternate:after {
+
     content: "\f005";
     display: inline-block;
     position: relative;
@@ -74,6 +77,15 @@ hr.star-primary {
 hr.star-primary:after {
     color: #{{ site.color.secondary }};
     background-color: #fff;
+}
+
+hr.star-alternate {
+    border-color: #fff;
+}
+
+hr.star-alternate:after {
+    color: #fff;
+    background-color: #333;
 }
 
 .img-centered {
@@ -183,6 +195,11 @@ section h2 {
 section.success {
     color: #fff;
     background: #{{ site.color.primary }};
+}
+
+section.alternate {
+    color: #fff;
+    background: #333;
 }
 
 @media(max-width:767px) {
@@ -306,7 +323,7 @@ section.success {
 
 .floating-label-form-group input,
 .floating-label-form-group textarea {
-    z-index: 1;
+    z-index: 2;
     position: relative;
     padding-right: 0;
     padding-left: 0;
@@ -350,6 +367,76 @@ section.success {
 }
 
 form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #eee;
+}
+
+
+#mc-embedded-signup * {
+    z-index: 2;
+}
+
+#mc-embedded-subscribe-form .input.button,
+.input.button-outline:focus,
+.input.button-outline:active,
+.input.button-outline.active {
+    border: solid 2px #fff;
+    color: #{{ site.color.primary }};
+    background: #fff;
+}
+
+.div.mc-field-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #eee;
+}
+
+.div.mc-field-group label input,
+.div.mc-field-group label textarea {
+    z-index: 2;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+}
+
+.div.mc-field-group	label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+.div.mc-field-group::not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid #eee;
+}
+
+.div.mc-field-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.div.mc-field-group-with-focus label {
+    color: #{{ site.color.primary }};
+}
+
+form .row:first-child .div.mc-field-group	 {
     border-top: 1px solid #eee;
 }
 
@@ -482,3 +569,4 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+
