@@ -229,7 +229,7 @@ class App{
     state.text = {
       baseLine: 'top',
       font: '800 170px Montserrat',
-      value: 'SPEEDB'
+      value:'ROCKS\u00B3'
     }
   }
   initCheckingInterval() {
