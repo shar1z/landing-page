@@ -1,6 +1,6 @@
 # Site settings
 title: 
-email: hello@speedb.io
+email: 
 url: https://speedb.io
 description: "Revolutionizing EVERYTHING you've accepted about data management."
 keywords: "storage engine, database engine, data acceleration, small object data store"
@@ -34,7 +34,7 @@ color:
 footer:
   copyright: Dr. Henry Jekyll
   location: Location
-  #social: Around the Web
+  social: To Infinity <br/>And Beyond
   #credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
@@ -52,8 +52,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: To Infinity 
-  - line: And Beyond
+  - line: 
+  - line: 
 
 # Credits content
 credits: ''
